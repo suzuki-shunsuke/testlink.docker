@@ -1,0 +1,12 @@
+testlink:
+  image: suzukishunsuke/testlink:1.0.0
+  hostname: testlink
+  ports:
+  - "3000:80"
+  links:
+  - mysql
+mysql:
+  image: mysql:5.6.29
+  hostname: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: password
